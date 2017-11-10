@@ -1,0 +1,33 @@
+Source : JViewer_common
+Version :   3.14.0.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Othiyappan.K (othiyappank@amiindia.co.in)
+License : AMI
+Source-Location : UNKNOWN
+Source-Version : 1.0.0
+Builds : JViewer_common
+Build-Depends : JViewer_signkey, BaseSystem
+Architecture : ANY
+Urgency :   medium
+Description : This package contains JViewer common source such as GUI,Vmedia source package.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : JViewer_common
+Section : app
+Group : KVM
+Essential : NO
+Required : adviser
+Build-Precedence : CONFIG_SPX_FEATURE_REBUILD_JAVA_APPS
+Description : This package contains JViewer common source such as GUI,Vmedia source package.
+.
+

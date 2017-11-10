@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: com.ami.kvm.jviewer.JViewer
+Class-Path: JViewer-SOC.jar JViewer-AVIStream.jar
+Permissions: all-permissions
+

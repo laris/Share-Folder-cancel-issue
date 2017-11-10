@@ -1,0 +1,21 @@
+#Extract Source	in %SOURCE
+extract_source:
+		SET_VALUE PACKAGE_NAME %PACKAGE
+		INVOKE_SHELL sourcejar.sh
+
+#Build Source in %BUILD
+build_source:
+		SET_VALUE PACKAGE_NAME %PACKAGE
+		INVOKE_SHELL buildjar.sh
+
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+build_package-JViewer_common:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/JViewer.jar %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/jviewer.jnlp %TEMPDIR/%PACKAGE/tmp
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+
+	
